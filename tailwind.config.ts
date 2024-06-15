@@ -13,7 +13,8 @@ const config: Config = {
       },
       backgroundColor : {
         primary: "#498F7E",
-        primaryDark: "#2F6F5F"
+        primaryDark: "#2F6F5F",
+        secondary: "#C8C8C8",
       },
       spacing: {
         '13': '3.25rem',
@@ -23,6 +24,9 @@ const config: Config = {
         '160': '40rem',
         '224': '56rem',
         '256': '64rem',
+      },
+      boxShadow: {
+        'about': '15 15px 15px -15px rgba(0, 0, 0, 0.3)',
       }
     },
   },
