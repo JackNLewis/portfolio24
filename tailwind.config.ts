@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: "#498F7E",
+      },
       textColor: {
         primary: "#498F7E"
       },
@@ -27,6 +30,9 @@ const config: Config = {
       },
       boxShadow: {
         'about': '15 15px 15px -15px rgba(0, 0, 0, 0.3)',
+      },
+      borderColor : {
+        'primary' : "#498F7E",
       }
     },
   },

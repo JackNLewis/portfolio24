@@ -1,12 +1,10 @@
 "use client"
 import SkillCard from "../components/skillscard"
 
- 
-
 export default function Skills() {
  
     return(
-        <div className="relative w-screen h-screen flex items-start mt-12 justify-between items-center w-4/5 mx-auto" id="skills">
+        <div className="relative h-screen flex items-start mt-12 justify-between items-center w-4/5 mx-auto" id="skills">
             <div className="relative pt-48">
                 <h1 className="text-2xl font-medium text-primary">more...</h1>
                 <h1 className="text-4xl font-medium py-1">Skills I’ve picked up</h1>

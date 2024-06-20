@@ -22,7 +22,6 @@ export default function About() {
                 <h1 className="text-4xl font-medium py-1">Here’s a bit about me</h1>
                 <h2 className="text-black text-opacity-50 w-96 py-3 mb-40">Check out my journey and see some of the major milestones I’ve hit on the way.</h2>
                 <div className="flex w-full ">
-                    {/* <span className="block absolute w-full h-6 border-b-2 border-secondary border-dashed -z-10"/> */}
                     <span className="block absolute w-full h-6 border-b-2 border-secondary border-dashed -z-10"/>
                     {cards.map((card, i) => <AboutCard key={i} fill={card.fill}/>)}
                 </div>
