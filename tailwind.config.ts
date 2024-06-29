@@ -18,10 +18,12 @@ const config: Config = {
         primary: "#498F7E",
         primaryDark: "#2F6F5F",
         secondary: "#C8C8C8",
+        secondaryDark: "#949494"
       },
       spacing: {
         '13': '3.25rem',
         '15': '3.75rem',
+        '130': '28rem',
         '128': '32rem',
         '144': '36rem',
         '160': '40rem',

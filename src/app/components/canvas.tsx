@@ -1,17 +1,41 @@
-import { useEffect, useRef } from "react";
-import points from "@/lib/points";
+"use client"
 
-export default function Canvas({ height = 500, width = 500, styles = ""}) {
+import { useEffect, useRef } from "react";
+import {point, points1, points2, points3, points4, points5, points6, points7} from "@/lib/points";
+
+export default function Canvas({ pointIndex = 0, height = 800, width = 800, styles = ""}) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const frameRef = useRef<number>(0);
 
   useEffect(() => {
+    let points : point[]
+    switch (pointIndex){
+      case 2:
+        points = points2;
+        break;
+      case 3:
+        points = points3
+        break;
+      case 4:
+        points = points4;
+        break;
+      case 5:
+        points = points5
+        break;
+      case 6:
+        points = points6
+        break;
+      case 7:
+        points = points7
+        break;
+      default:
+        points = points1;
+    }
+
     function draw(context: CanvasRenderingContext2D) {
+  
       if (context) {
-        context.fillStyle = "red";
         context.fillRect(0, 0, height, width);
-
-
 
         context.clearRect(0, 0, width, height); // clear the canvas
         points.forEach(pt => {
@@ -21,32 +45,22 @@ export default function Canvas({ height = 500, width = 500, styles = ""}) {
           context.arc(pt.cx, pt.cy, (pt.ra)*3,0,Math.PI * 2);
 
           context.fill();
-            
-           
-          
+  
           let threshold = 20
-
-
-    
-          if(Math.abs(pt.cx - pt.startX) > threshold) {
+          if(Math.abs(pt.cx - pt.startX) > threshold || (pt.cx<= 5) ){
               pt.dx = -pt.dx;
           }
 
-          if(Math.abs(pt.cy - pt.startY) > threshold) {
+          if(Math.abs(pt.cy - pt.startY) > threshold || (pt.cy <= 5) ){
               pt.dy = -pt.dy;
           }
 
           pt.dx += (Math.random()-0.5) * 0.02; // Apply easing effect
           pt.dy += (Math.random()-0.5) * 0.02; // Apply easing effect
 
-          pt.cx += pt.dx * 0.1;
-          pt.cy += pt.dy * 0.1;
+          pt.cx += pt.dx * 0.05;
+          pt.cy += pt.dy * 0.05;
         })
-        
-
-
-
-
         frameRef.current = requestAnimationFrame(() => draw(context));
       }
     }
@@ -61,7 +75,7 @@ export default function Canvas({ height = 500, width = 500, styles = ""}) {
       }
     }
     return () => cancelAnimationFrame(frameRef.current);
-  }, [height, width]);
+  }, []);
 
   return <canvas ref={canvasRef} className={styles}/>;
 }

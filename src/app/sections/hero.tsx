@@ -5,9 +5,10 @@ import Snippet from "../components/snipppet";
 
 export default function Hero() {
   return (
-    <div className="relative w-screen flex flex-col justify-center items-center m-b-16">
+    <div id="hero-container" className="relative w-screen flex flex-col justify-center items-center m-b-16">
       <Navbar />
-      <Canvas styles="absolute top-0 left-0"/>
+      <Canvas pointIndex={1} styles="absolute top-0 left-0"/>
+      <Canvas pointIndex={2} width={420} styles="absolute right-0 bottom-0"/>
       <div className="w-1/2 text-center pt-64">
         <h2 className="text-3xl font-medium text-primary">Hey, I'm</h2>
         <h1 className="text-5xl font-medium py-1">Jack Lewis</h1>

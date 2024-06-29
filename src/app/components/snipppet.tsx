@@ -1,6 +1,6 @@
 export default function Snippet(){
     return (
-        <div className="block relative w-224 pb-8 rounded-xl boxShadow-xl border shadow-md flex justify-center">
+        <div className="block relative w-224 pb-8 rounded-xl boxShadow-xl border shadow-md flex bg-white justify-center">
             <div className="flex absolute top-5 left-6 gap-x-2">
                 <div className="block bg-red-600 w-3 h-3 rounded-full shadow-md"></div>
                 <div className="block bg-yellow-400 w-3 h-3 rounded-full shadow-md"></div>
