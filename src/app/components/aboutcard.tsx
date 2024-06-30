@@ -8,7 +8,7 @@ export default function AboutCard({ cardFill = false } : cardProp){
     
     return (
         <div className="relative pr-16">
-            <span className="block absolute w-full h-6 border-b-2 border-secondary border-dashed -z-10"/>
+            <span className="block absolute w-full h-6 -z-10"/>
            <div className={`w-12 h-12 border ${cardFill ? "bg-primary" : "bg-white"} round rounded-full shadow`}>
                 <svg className="relative left-3 top-3 w-6 h-6 " viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path 

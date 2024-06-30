@@ -3,7 +3,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretDown, faCaretUp, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import BlogCard from '../components/blogcard'
-import Canvas from '../components/canvas'
 import { useState } from "react";
 
 export default function Blog() {
@@ -16,9 +15,8 @@ export default function Blog() {
 
     return(
         <div className='relative'>
-            <Canvas pointIndex={5} width={350} styles="absolute top-96 right-0"/>
-            <Canvas pointIndex={6} width={350} styles="absolute top-0 "/>
-
+            {/* <Canvas pointIndex={5} width={350} styles="absolute top-96 right-0"/>
+            <Canvas pointIndex={6} width={350} styles="absolute top-0 "/> */}
             <div className="relative w-screen min-h-screen flex flex-col items-center" id="blog">
                 <div className="relative pt-24">
                     <h1 className="text-2xl font-medium text-primary">blog</h1>
@@ -34,7 +32,7 @@ export default function Blog() {
                     </div>
                     <div className='relative flex items-center'>
                         <select name="sort" onChange={(event) => setOption(event.target.value)} 
-                        className='relative border focus:border-primary rounded text-primary text-light text-sm outline-none py-1 pl-2 pr-6 appearance-none shadow'>
+                        className='relative border focus:border-primary rounded text-primary text-light text-sm outline-none py-1 pl-2 pr-6 appearance-none shadow hover:appearance-none'>
                             <option>Newest</option>
                             <option>Oldest</option>
                         </select>

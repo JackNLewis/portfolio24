@@ -6,9 +6,7 @@ export default function Skills() {
  
     return(
         <div>
-
-        
-            <Canvas styles="absolute" pointIndex={4} />
+            {/* <Canvas styles="absolute" pointIndex={4} /> */}
             <div className="relative h-screen flex items-start mt-12 justify-between items-center w-4/5 mx-auto" id="skills">
                 <div className="relative pt-48">
                     <h1 className="text-2xl font-medium text-primary">more...</h1>

@@ -21,8 +21,8 @@ export default function About() {
     ]
 
     return(
-        <div className="relative sm:h-screen min-h-screen flex flex-col items-start mt-12" id="about">
-            <Canvas pointIndex={3} width={800} styles="absolute top-10 right-0"/>
+        <div className="relative sm:h-screen min-h-screen flex flex-col items-start mt-12 pt-64" id="about">
+            {/* <Canvas pointIndex={3} width={800} styles="absolute top-10 right-0"/> */}
             
             <div className="relative pt-48 w-4/5 mx-auto">
                 <h1 className="text-2xl font-medium text-primary">about.</h1>

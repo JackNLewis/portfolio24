@@ -77,5 +77,5 @@ export default function Canvas({ pointIndex = 0, height = 800, width = 800, styl
     return () => cancelAnimationFrame(frameRef.current);
   }, []);
 
-  return <canvas ref={canvasRef} className={styles}/>;
+  return <canvas ref={canvasRef} className={styles + " -z-10"}/>;
 }

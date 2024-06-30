@@ -9,8 +9,7 @@ export default function Contact() {
  
     return(
         <div className="relative">
-
-        <Canvas pointIndex={7} height={250} styles="absolute bottom-0" />
+        {/* <Canvas pointIndex={7} height={250} styles="absolute bottom-0" /> */}
         <div className="relative w-4/5 mx-auto h-screen flex justify-between items-start mt-12" id="contact">
             <div className="relative pt-48">
                 <div>
@@ -31,24 +30,24 @@ export default function Contact() {
                     <h1 className="text-grey py-3 pl-4">jlewisdev@proton.me</h1>
                 </div>
             </div>
-                <form className="self-center flex flex-col justify-evenly shadow-lg border rounded-lg h-160 w-130 p-12">
+                <form className="self-center flex flex-col justify-evenly shadow-lg border rounded-lg h-160 w-128 p-12">
                     <div>
                         <label className="block text-primary  mb-2" form="username">
                             Your Name:
                         </label>
-                        <input className="shadow appearance-none border rounded-lg w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Username" />
+                        <input className="shadow appearance-none border border-gray-300 focus:border-primary  rounded-lg w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Username" />
                     </div>
                     <div>
                         <label className="block text-primary mb-2" form="username">
                             Email:
                         </label>
-                        <input className="shadow appearance-none border rounded-lg w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Email" />
+                        <input className="shadow appearance-none border border-gray-300 focus:border-primary rounded-lg w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Email" />
                     </div>
                     <div>
                         <label className="block text-primary mb-2" form="username">
                             Message:
                         </label>
-                        <textarea rows={8} className="shadow resize-none appearance-none border rounded-lg w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" placeholder="Message" />
+                        <textarea rows={8} className="shadow resize-none border-gray-300 focus:border-primary  appearance-none border rounded-lg w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" placeholder="Message" />
                     </div>
                     <button className="shadow-lg bg-primary hover:bg-primaryDark text-white w-full py-4 rounded-lg">Send</button>
                 </form>

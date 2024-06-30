@@ -1,10 +1,12 @@
 import type { Config } from "tailwindcss";
+import flowbite from "flowbite-react/tailwind";
 
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    flowbite.content(),
   ],
   theme: {
     extend: {
@@ -23,7 +25,7 @@ const config: Config = {
       spacing: {
         '13': '3.25rem',
         '15': '3.75rem',
-        '130': '28rem',
+        '112': '28rem',
         '128': '32rem',
         '144': '36rem',
         '160': '40rem',
@@ -38,6 +40,8 @@ const config: Config = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    flowbite.plugin(),
+  ],
 };
 export default config;
